@@ -1,3 +1,53 @@
+#filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    align-items: center;
+    margin: var(--space-lg) auto var(--space-xl);
+    width: 100%;
+    max-width: 1200px;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.filter-group:first-child {
+    justify-content: flex-start;
+}
+
+.filter-group:last-child {
+    justify-content: flex-end;
+}
+
+.filter-group label {
+    color: var(--clr-text-primary);
+}
+
+.filter-group select {
+    padding: var(--space-xs) var(--space-sm);
+    border: 1px solid var(--clr-text-muted);
+    border-radius: var(--radius-sm);
+    background-color: var(--clr-surface);
+    color: var(--clr-text-primary);
+    font-size: var(--font-size-base);
+}
+
+@media (max-width: 700px) {
+    #filters {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .filter-group,
+    .filter-group:first-child,
+    .filter-group:last-child {
+        justify-content: center;
+    }
+}
+
 .routes-grid {
     display: flex;
     flex-direction: column;
@@ -31,7 +81,8 @@
                 color: var(--clr-region-central-text);
             }
 
-            .highlight-tag, .season-badge {
+            .highlight-tag,
+            .season-badge {
                 border-color: var(--clr-region-central-border);
             }
 
@@ -50,7 +101,8 @@
                 color: var(--clr-region-northern-text);
             }
 
-            .highlight-tag, .season-badge {
+            .highlight-tag,
+            .season-badge {
                 border-color: var(--clr-region-northern-border);
             }
 
@@ -69,7 +121,8 @@
                 color: var(--clr-region-kansai-text);
             }
 
-            .highlight-tag, .season-badge {
+            .highlight-tag,
+            .season-badge {
                 border-color: var(--clr-region-kansai-border);
             }
 
@@ -88,7 +141,8 @@
                 color: var(--clr-region-hokkaido-text);
             }
 
-            .highlight-tag, .season-badge {
+            .highlight-tag,
+            .season-badge {
                 border-color: var(--clr-region-hokkaido-border);
             }
 
