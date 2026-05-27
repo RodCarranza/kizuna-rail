@@ -406,14 +406,114 @@ article.confirmation-page {
 }
 
 @media print {
-    article.confirmation-page {
-        .confirmation-actions {
-            display: none;
-        }
+    @page {
+        size: letter;
+        margin: 0.4in;
+    }
 
-        .confirmation-header {
-            background-color: white;
-            border: 2px solid var(--clr-primary);
-        }
+    header,
+    footer,
+    article.confirmation-page .confirmation-actions,
+    article.confirmation-page .next-steps,
+    article.confirmation-page .success-icon,
+    article.confirmation-page .confirmation-message {
+        display: none !important;
+    }
+
+    body {
+        background-color: white !important;
+        color: black !important;
+    }
+
+    main {
+        padding: 0 !important;
+    }
+
+    article.confirmation-page {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    article.confirmation-page .confirmation-header {
+        background-color: white !important;
+        border: 2px solid var(--clr-primary);
+        padding: 0.75rem !important;
+        margin-bottom: 0.75rem !important;
+        gap: 0.5rem !important;
+    }
+
+    article.confirmation-page .confirmation-title {
+        font-size: 1.5rem !important;
+        margin: 0.25rem 0 !important;
+    }
+
+    article.confirmation-page .booking-reference {
+        background-color: white !important;
+        padding: 0.5rem !important;
+        margin-top: 0.5rem !important;
+    }
+
+    article.confirmation-page .confirmation-content {
+        gap: 0.75rem !important;
+    }
+
+    article.confirmation-page .section-title {
+        font-size: 1.2rem !important;
+        margin-bottom: 0.4rem !important;
+        padding-bottom: 0.25rem !important;
+    }
+
+    article.confirmation-page .details-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.4rem !important;
+    }
+
+    article.confirmation-page .detail-card {
+        padding: 0.5rem !important;
+        box-shadow: none !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    article.confirmation-page .detail-icon {
+        font-size: 1.2rem !important;
+    }
+
+    article.confirmation-page .passengers-list {
+        gap: 0.4rem !important;
+    }
+
+    article.confirmation-page .passenger-info-card {
+        box-shadow: none !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    article.confirmation-page .passenger-header,
+    article.confirmation-page .passenger-details {
+        padding: 0.5rem !important;
+    }
+
+    article.confirmation-page .passenger-details {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 0.4rem !important;
+    }
+
+    article.confirmation-page .important-info {
+        padding: 0.5rem !important;
+        box-shadow: none !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    article.confirmation-page .important-info ul {
+        margin: 0.25rem 0 0 1rem !important;
+    }
+
+    article.confirmation-page .important-info li {
+        margin-bottom: 0.25rem !important;
     }
 }
